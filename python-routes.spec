@@ -1,17 +1,13 @@
 %define tarname Routes
-%define name	python-routes
-%define version 1.12.3
-%define release %mkrel 1
 
 Summary:	Routing recognition and generation tools for Python
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		python-routes
+Version:	1.12.3
+Release:	2
 Source0:	http://pypi.python.org/packages/source/R/%{tarname}/%{tarname}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		http://routes.groovie.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 Requires:	python-pkg-resources
 Requires:	python-webob
@@ -32,18 +28,22 @@ comes with an extensive unit test suite.
 %setup -q -n %{tarname}-%{version}
 
 %install
-%__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
+sed -i 's/.*egg-info$//' FILE_LIST
 pushd docs
 export PYTHONPATH=`dir -d ../build/lib*`
 make html
 rm -f _build/html/.buildinfo
 popd docs
 
-%clean
-%__rm -rf %{buildroot}
-
 %files -f FILE_LIST
-%defattr(-,root,root)
 %doc CHANGELOG LICENSE README docs/_build/html
+
+
+
+%changelog
+* Thu Mar 31 2011 Lev Givon <lev@mandriva.org> 1.12.3-1mdv2011.0
++ Revision: 649446
+- import python-routes
+
 
