@@ -2,9 +2,9 @@
 
 Summary:	Routing recognition and generation tools for Python
 Name:		python-routes
-Version:	1.12.3
-Release:	2
-Source0:	http://pypi.python.org/packages/source/R/%{tarname}/%{tarname}-%{version}.tar.gz
+Version:	1.13
+Release:	1
+Source0:	http://pypi.python.org/packages/source/R/Routes/Routes-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		http://routes.groovie.org/
@@ -45,5 +45,6 @@ popd docs
 * Thu Mar 31 2011 Lev Givon <lev@mandriva.org> 1.12.3-1mdv2011.0
 + Revision: 649446
 - import python-routes
+
 
 
