@@ -1,8 +1,9 @@
 %define tarname Routes
 
 Summary:	Routing recognition and generation tools for Python
+
 Name:		python-routes
-Version:	1.13
+Version:	2.0
 Release:	1
 Source0:	http://pypi.python.org/packages/source/R/Routes/Routes-%{version}.tar.gz
 License:	BSD
@@ -39,12 +40,6 @@ popd docs
 %files -f FILE_LIST
 %doc CHANGELOG LICENSE README docs/_build/html
 
-
-
-%changelog
-* Thu Mar 31 2011 Lev Givon <lev@mandriva.org> 1.12.3-1mdv2011.0
-+ Revision: 649446
-- import python-routes
 
 
 
