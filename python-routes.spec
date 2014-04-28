@@ -35,11 +35,7 @@ pushd docs
 export PYTHONPATH=`dir -d ../build/lib*`
 make html
 rm -f _build/html/.buildinfo
-popd docs
+popd
 
 %files -f FILE_LIST
-%doc CHANGELOG LICENSE README docs/_build/html
-
-
-
-
+%doc docs/_build/html
