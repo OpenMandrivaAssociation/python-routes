@@ -4,7 +4,7 @@ Summary:	Routing recognition and generation tools for Python
 
 Name:		python-routes
 Version:	2.0
-Release:	1
+Release:	2
 Source0:	http://pypi.python.org/packages/source/R/Routes/Routes-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
