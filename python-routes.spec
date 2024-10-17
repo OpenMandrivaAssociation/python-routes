@@ -8,7 +8,7 @@ Release:	2
 Source0:	http://pypi.python.org/packages/source/R/Routes/Routes-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
-Url:		http://routes.groovie.org/
+Url:		https://routes.groovie.org/
 BuildArch:	noarch
 Requires:	python-pkg-resources
 Requires:	python-webob
